@@ -1,6 +1,14 @@
 {
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      // uni-ui 规则如下配置, 参考 https://uniapp.dcloud.net.cn/component/uniui/quickstart.html
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
+  },
+  // 其他内容
   "pages": [
-    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    // pages 数组中第一项表示应用启动页, 参考 https://uniapp.dcloud.io/collocation/pages
     {
       "path": "pages/auth/index",
       "style": {
