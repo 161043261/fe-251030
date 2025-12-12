@@ -54,9 +54,11 @@
     "@dcloudio/uni-mp-xhs": "3.0.0-4080420251103001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4080420251103001",
     "@dcloudio/uni-ui": "^1.5.11",
+    "axios": "^1.13.2",
     "i18next": "^25.7.2",
     "i18next-vue": "^5.3.1",
     "sass": "^1.96.0",
+    "uniapp-axios-adapter": "^0.3.2",
     "vue": "^3.4.21",
     "vue-i18n": "^9.1.9"
   },

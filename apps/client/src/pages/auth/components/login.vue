@@ -1,26 +1,55 @@
 <script setup lang="ts">
 import { reactive } from 'vue';
-import { useTranslation } from 'i18next-vue';
+import { t } from 'i18next'
+import { loginApi } from '@/apis/auth';
+import { type ILoginData } from '@/types/auth';
 
-const { i18next, t } = useTranslation();
-const formData = reactive({
+const formData = reactive<ILoginData>({
   username: '',
   password: '',
 })
+
+const handleLogin = async () => {
+  try {
+    const { data } = await loginApi(formData);
+    uni.setStorageSync('token', data.token);
+    uni.reLaunch({
+      url: '/pages/index/index'
+    })
+  } catch (err) {
+    console.log(err)
+  }
+}
 </script>
 
 <template>
-  <view>
-    <h1>{{ i18next.language }}</h1>
-    <uni-form>
-      <uni-forms-item :label="t('账号')" name="username" prop="username" required>
-        <uni-easyinput v-model="formData.username" type="text" :placeholder="t('请输入账号')" />
-      </uni-forms-item>
-      <uni-forms-item required :label="$t('密码')" name="password" prop="password">
-        <uni-easyinput v-model="formData.password" type="password" :placeholder="$t('请输入密码')" />
-      </uni-forms-item>
-    </uni-form>
+  <view class="login">
+    <view class="login-container">
+      <uni-form>
+        <uni-forms-item :label="t('Username')" name="username" prop="username" required>
+          <uni-easyinput v-model="formData.username" type="text" :placeholder="t('Please enter your username')" />
+        </uni-forms-item>
+        <uni-forms-item required :label="t('Password')" name="password" prop="password">
+          <uni-easyinput v-model="formData.password" type="password" :placeholder="t('Please enter your password')" />
+        </uni-forms-item>
+
+        <view class="uni-button-group">
+          <button type="button" @click="handleLogin" class="login-button">{{ t('Login') }}</button>
+        </view>
+      </uni-form>
+    </view>
   </view>
 </template>
 
-<style scoped lang="css"></style>
+<style scoped lang="scss">
+.login {
+  &- {
+    &container {
+      padding: 2rem;
+    }
+    &button {
+      background: $uni-color-success;
+    }
+  }
+}
+</style>

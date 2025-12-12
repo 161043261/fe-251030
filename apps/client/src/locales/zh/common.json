@@ -1,6 +1,11 @@
 {
-  "请输入账号": "Please enter your username",
-  "请输入密码": "Please enter your password",
-  "账号": "Username",
-  "密码": "Password"
+  "Please enter your username": "请输入账号",
+  "Please enter your password": "请输入密码",
+  "Username": "账号",
+  "Password": "密码",
+  "Already have an username? Go to login": "已有账号? 去登录",
+  "Don't have an username? Go to register": "没有账号? 去注册",
+  "Go to register": "去注册",
+  "Login": "登录",
+  "Register": "注册"
 }

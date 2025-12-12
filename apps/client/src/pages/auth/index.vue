@@ -2,13 +2,12 @@
 import { ref } from 'vue';
 import Login from './components/login.vue';
 import Register from './components/register.vue';
+import { t } from 'i18next'
 
-// 当前是登录还是注册
 const isLogin = ref(true);
 </script>
 
 <template>
-  <!-- view 类似 div -->
   <view class="auth">
     <view v-if="isLogin">
       <Login class="auth__login" />
@@ -18,10 +17,25 @@ const isLogin = ref(true);
     </view>
 
     <view class="auth__footer">
-      <view class="auth__footer-item" @click="isLogin = true">已有账号, 登录</view>
-      <view class="auth__footer-item" @click="isLogin = false">注册</view>
+      <view v-if="!isLogin" class="auth__footer-item" @click="isLogin = true">
+        {{ t('Already have an username? Go to login') }}
+      </view>
+      <view v-else class="auth__footer-item" @click="isLogin = false">
+        {{ t('Don\'t have an username? Go to register') }}
+      </view>
     </view>
   </view>
 </template>
 
-<style scoped lang="css"></style>
+<style scoped lang="scss">
+.auth {
+  &__ {
+    &footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+  }
+}
+</style>
