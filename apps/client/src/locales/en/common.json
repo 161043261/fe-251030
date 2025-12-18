@@ -1,10 +1,13 @@
 {
-  "Please enter your username": "Please enter your username",
-  "Please enter your password": "Please enter your password",
-  "Username": "Username",
-  "Password": "Password",
-  "Already have an username? Go to login": "Already have an username? Go to login",
-  "Don't have an username? Go to register": "Don't have an username? Go to register",
-  "Login": "Login",
-  "Register": "Register"
+  "already have an username? go to login": "Already have an username? Go to login",
+  "don't have an username? go to register": "Don't have an username? Go to register",
+  "login": "Login",
+  "password": "Password",
+  "please enter your password": "Please enter your password",
+  "please enter your username": "Please enter your username",
+  "register": "Register",
+  "username": "Username",
+  "title": "Title",
+  "loading": "Loading...",
+  "network error": "Network error"
 }

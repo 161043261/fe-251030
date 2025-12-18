@@ -18,14 +18,53 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "Homepage"
+      }
+    },
+    {
+      "path": "pages/add-note/index",
+      "style": {
+        "navigationBarTitleText": "Add Note"
+      }
+    },
+    {
+      "path": "pages/self/index",
+      "style": {
+        "navigationBarTitleText": "Myself"
       }
     }
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTitleText": "fe-251030",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#fff"
+  },
+  //
+  "tabBar": {
+    "backgroundColor": "#fff", // $uni-bg-color
+    "borderStyle": "#c8c7cc", // $uni-border-color
+    "color": "#000", // $uni-text-color
+    "selectedColor": "#999", // $uni-text-color-grey
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Homepage",
+        "iconPath": "static/images/home.svg",
+        "selectedIconPath": "static/images/home.svg"
+      },
+      {
+        "pagePath": "pages/add-note/index",
+        "text": "Add Note",
+        "iconPath": "static/images/add-note.svg",
+        "selectedIconPath": "static/images/add-note.svg"
+      },
+      {
+        "pagePath": "pages/self/index",
+        "text": "Myself",
+        "iconPath": "static/images/self.svg",
+        "selectedIconPath": "static/images/self.svg"
+      }
+    ]
   }
 }

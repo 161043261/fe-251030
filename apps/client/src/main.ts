@@ -35,7 +35,7 @@ export function createApp() {
       if (err) {
         console.log(err);
       }
-    }
+    },
   );
 
   const app = createSSRApp(App);

@@ -1,11 +1,14 @@
 {
-  "Please enter your username": "请输入账号",
-  "Please enter your password": "请输入密码",
-  "Username": "账号",
-  "Password": "密码",
-  "Already have an username? Go to login": "已有账号? 去登录",
-  "Don't have an username? Go to register": "没有账号? 去注册",
-  "Go to register": "去注册",
-  "Login": "登录",
-  "Register": "注册"
+  "already have an username? go to login": "已有账号? 去登录",
+  "don't have an username? go to register": "没有账号? 去注册",
+  "go to register": "去注册",
+  "login": "登录",
+  "password": "密码",
+  "please enter your password": "请输入密码",
+  "please enter your username": "请输入账号",
+  "register": "注册",
+  "username": "账号",
+  "title": "标题",
+  "loading": "加载中",
+  "network error": "网络错误"
 }
